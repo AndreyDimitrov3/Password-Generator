@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="passwordGenerator.css">
+    <title>Password Generator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+  </head>
+    <body>
+      <main class="main">
+        <h1 class="heading">Password Generator</h1>
+        <header class="header">
+          <input type="text" placeholder="P4$5W0rD!" class="inputValue" id="inputValue" readonly>
+          <img src="assets/images/icon-copy.svg" alt="Copy Icon" class="copyIcon" id="copyIcon">
+        </header>
+
+        <section class="section">
+          <div class="characterLengthHolder">
+            <h2 class="characterLength">Character Length</h2>
+            <p class="characterLengthValue" id="characterLengthValue">10</p>
+          </div>
+          <input type="range" name="length" value="10" min="1" max="20" class="range" id="range">
+
+          <div class="checkboxHolder" draggable="false">
+            <label class="checkboxValuesHolder">
+              <input name="upperCase" type="checkbox" class="checkboxHidden" id="upperCase">
+              <span class="checkbox"></span>
+              <span class="labelText">Include Uppercase Letters</span>
+            </label>
+          
+            <label class="checkboxValuesHolder">
+              <input type="checkbox" class="checkboxHidden" id="lowerCase">
+              <span class="checkbox"></span>
+              <span class="labelText">Include Lowercase Letters</span>
+            </label>
+          
+            <label class="checkboxValuesHolder">
+              <input type="checkbox" class="checkboxHidden" id="numbers">
+              <span class="checkbox"></span>
+              <span class="labelText">Include Numbers</span>
+            </label>
+          
+            <label class="checkboxValuesHolder">
+              <input type="checkbox" class="checkboxHidden" id="symbols">
+              <span class="checkbox"></span>
+              <span class="labelText">Include Symbols</span>
+            </label>
+          </div>
+          
+
+          <div class="strengthHolder">
+            <p class="strengthP">Strength</p>
+            <div class="strengthIndicatorHolder">
+              <span class="strengthIndicatorP" id="strengthIndicatorP"></span>
+              <div class="strengthIndicator" id="strengthIndicator1"></div>
+              <div class="strengthIndicator" id="strengthIndicator2"></div>
+              <div class="strengthIndicator" id="strengthIndicator3"></div>
+              <div class="strengthIndicator" id="strengthIndicator4"></div>
+            </div>
+          </div>
+
+          <button class="generateButton" id="generate">Generate <img src="assets/images/icon-arrow-right.svg" alt="Arrow Right" class="arrowRight"></button>
+        </section>
+      </main>
+
+  <script src="passwordGenerator.js"></script>
+  </body>
+</html>
